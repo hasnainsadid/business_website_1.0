@@ -32,3 +32,7 @@ Route::get('/contact', function () {
                 backend
 ============================================
 */
+
+Route::get('/admin', function () {
+    return view('backend.layouts.home');
+});
