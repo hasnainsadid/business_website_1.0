@@ -27,6 +27,8 @@ Route::get('/contact', function () {
 });
 
 
+
+
 /* 
 ============================================
                 backend
@@ -34,5 +36,5 @@ Route::get('/contact', function () {
 */
 
 Route::get('/admin', function () {
-    return view('backend.layouts.home');
+    return view('backend.home');
 });
