@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('designation');
             $table->string('email');
-            $table->string('address');
             $table->string('img');
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->string('insta');
+            $table->string('linkedin');
             $table->timestamps();
         });
     }

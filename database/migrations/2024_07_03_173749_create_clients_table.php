@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('profession');
             $table->string('description');
-            $table->string('email');
-            $table->string('address');
             $table->string('img');
             $table->timestamps();
         });
