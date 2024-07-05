@@ -10,9 +10,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [FrontendController::class, 'home']);
 
-Route::get('/about', function () {
-    return view('frontend.about');
-});
+Route::get('/about', [FrontendController::class, 'about']);
+
 Route::get('/service', function () {
     return view('frontend.service');
 });

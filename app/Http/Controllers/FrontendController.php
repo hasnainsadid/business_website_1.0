@@ -12,4 +12,8 @@ class FrontendController extends Controller
         $service = Service::all();
         return view('frontend.home', compact('service'));
     }
+    public function about()
+    {
+        return view('frontend.about');
+    }
 }
