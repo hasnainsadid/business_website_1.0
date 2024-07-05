@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /* 
@@ -7,9 +8,8 @@ use Illuminate\Support\Facades\Route;
                 Frontend
 ============================================
 */
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', [FrontendController::class, 'home']);
+
 Route::get('/about', function () {
     return view('frontend.about');
 });
