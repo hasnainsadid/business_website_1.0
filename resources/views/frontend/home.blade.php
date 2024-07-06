@@ -278,36 +278,20 @@
             <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span></p>
             <h1 class="text-center mb-5">What Say Our Clients!</h1>
             <div class="owl-carousel testimonial-carousel">
+                @foreach ($clients as $item)
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>{{$item->description}}</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-1.jpg" style="width: 65px; height: 65px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/{{$item->img}}" style="width: 65px; height: 65px;">
                         <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">{{$item->name}}</h5>
+                            <span>{{$item->profession}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-2.jpg" style="width: 65px; height: 65px;">
-                        <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-3.jpg" style="width: 65px; height: 65px;">
-                        <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                
+                 
             </div>
         </div>
     </div>
@@ -322,10 +306,11 @@
                 <h1 class="text-center mb-5">Our Team Members</h1>
             </div>
             <div class="row g-4">
+                 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-3.jpg" alt="">
                             <h5>John Doe</h5>
                             <span>CEO & Founder</span>
                         </div>

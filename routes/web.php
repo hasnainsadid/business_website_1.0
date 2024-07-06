@@ -11,18 +11,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontendController::class, 'home']);
 
 Route::get('/about', [FrontendController::class, 'about']);
+Route::get('/project', [FrontendController::class, 'project']);
+ 
 
 Route::get('/service', function () {
     return view('frontend.service');
 });
-Route::get('/project', function () {
-    return view('frontend.project');
-});
-Route::get('/team', function () {
-    return view('frontend.team');
-});
+
+ 
 Route::get('/contact', function () {
     return view('frontend.contact');
+});
+
+Route::get('/team', function () {
+    return view('frontend.team');
 });
 
 
