@@ -15,96 +15,25 @@
                 <h1 class="text-center mb-5">Our Team Members</h1>
             </div>
             <div class="row g-4">
+                @foreach ($team as $item )
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-1.jpg" alt="">
-                            <h5>John Doe</h5>
-                            <span>CEO & Founder</span>
+                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/{{$item->img}}" alt="">
+                            <h5>{{$item->name}}</h5>
+                            <span>{{$item->designation}}</span>
                         </div>
                         <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="{{$item->facebook}}"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="{{$item->twitter}}"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="{{$item->insta}}"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="{{$item->linkedin}}"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded">
-                        <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-2.jpg" alt="">
-                            <h5>Jessica Brown</h5>
-                            <span>Web Designer</span>
-                        </div>
-                        <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light rounded">
-                        <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-3.jpg" alt="">
-                            <h5>Tony Johnson</h5>
-                            <span>SEO Expert</span>
-                        </div>
-                        <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light rounded">
-                        <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-2.jpg" alt="">
-                            <h5>John Doe</h5>
-                            <span>CEO & Founder</span>
-                        </div>
-                        <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded">
-                        <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-3.jpg" alt="">
-                            <h5>Jessica Brown</h5>
-                            <span>Web Designer</span>
-                        </div>
-                        <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light rounded">
-                        <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/team-1.jpg" alt="">
-                            <h5>Tony Johnson</h5>
-                            <span>SEO Expert</span>
-                        </div>
-                        <div class="d-flex justify-content-center p-4">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
+                </div>  
+                @endforeach
+                 
+
             </div>
         </div>
     </div>

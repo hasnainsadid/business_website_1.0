@@ -9,27 +9,13 @@ use Illuminate\Support\Facades\Route;
 ============================================
 */
 Route::get('/', [FrontendController::class, 'home']);
-
 Route::get('/about', [FrontendController::class, 'about']);
 Route::get('/project', [FrontendController::class, 'project']);
- 
-
-Route::get('/service', function () {
-    return view('frontend.service');
-});
+Route::get('/team',[FrontendController::class,'team']);
+Route::get('/contact',[FrontendController::class,'contact']);
+Route::get('/service',[FrontendController::class,'service']);
 
  
-Route::get('/contact', function () {
-    return view('frontend.contact');
-});
-
-Route::get('/team', function () {
-    return view('frontend.team');
-});
-
-
-
-
 /* 
 ============================================
                 backend

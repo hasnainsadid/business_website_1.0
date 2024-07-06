@@ -6,6 +6,7 @@ use App\Models\Service;
 use App\Models\Clients;
 use App\Models\Project;
 use App\Models\Team;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -14,8 +15,10 @@ class FrontendController extends Controller
     {
         $service = Service::all();
         $clients= Clients::all();
+        $team= Team::all();
+
       
-        return view('frontend.home', compact('service', 'clients' ));
+        return view('frontend.home', compact('service', 'clients','team' ));
     }
     public function about()
     {
@@ -25,5 +28,21 @@ class FrontendController extends Controller
     public function project()
     {   $project = Project::all();
         return view('frontend.project',compact('project'));
+    }
+
+    public function team(){
+
+        $team =Team::all();
+        return view('frontend.team',compact('team'));
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+
+    public function srevice()
+    {
+        return view('frontend.srevice');
     }
 }
