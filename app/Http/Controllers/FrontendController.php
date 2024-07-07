@@ -7,7 +7,7 @@ use App\Models\Service;
 use App\Models\Clients;
 use App\Models\Project;
 use App\Models\Team;
-use GuzzleHttp\Client;
+ 
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
