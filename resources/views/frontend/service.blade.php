@@ -14,68 +14,18 @@
                 <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
                 <h1 class="text-center mb-5">What Solutions We Provide</h1>
             </div>
-            <div class="row g-4">
+            <div class="row g-4"> @foreach ($service as $item)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item d-flex flex-column text-center rounded">
                         <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-search fa-2x"></i>
+                            <i class="{{$item->logo}} fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">SEO Optimization</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <h5 class="mb-3">{{$item->title}}</h5>
+                        <p class="m-0">{{$item->description}}</p>
                         <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-laptop-code fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Web Design</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fab fa-facebook-f fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Social Media Marketing</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-mail-bulk fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Email Marketing</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-thumbs-up fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">PPC Advertising</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fab fa-android fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">App Development</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+                @endforeach
         </div>
     </div>
     <!-- Service End -->
@@ -106,37 +56,18 @@
             <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span></p>
             <h1 class="text-center mb-5">What Say Our Clients!</h1>
             <div class="owl-carousel testimonial-carousel">
+                @foreach ($clients as $item)
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>{{$item->description}}</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-1.jpg" style="width: 65px; height: 65px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/{{$item->img}}" style="width: 65px; height: 65px;">
                         <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">{{$item->name}}</h5>
+                            <span>{{$item->profession}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-2.jpg" style="width: 65px; height: 65px;">
-                        <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('')}}assets/img/testimonial-3.jpg" style="width: 65px; height: 65px;">
-                        <div class="ps-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
         </div>
     </div>
     <!-- Testimonial End -->
