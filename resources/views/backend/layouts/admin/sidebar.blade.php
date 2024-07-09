@@ -2,7 +2,7 @@
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
         <a href="index.html"> <img alt="image" src="{{asset('')}}backend/assets/img/logo.png" class="header-logo" /> <span
-            class="logo-name">Otika</span>
+            class="logo-name"> Adming</span>
         </a>
       </div>
       <ul class="sidebar-menu">
@@ -14,23 +14,23 @@
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="briefcase"></i><span>Service</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="widget-chart.html">Add New Service</a></li>
-            <li><a class="nav-link" href="widget-data.html">Service list</a></li>
+            <li><a class="nav-link" href="{{route('services.create')}}">Add New Service</a></li>
+            <li><a class="nav-link" href="{{route('services.index')}}">Service list</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Member</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="chat.html">Add New Member</a></li>
-            <li><a class="nav-link" href="portfolio.html">Member list</a></li>
+            <li><a class="nav-link" href="{{route('teams.create')}}">Add New Member</a></li>
+            <li><a class="nav-link" href="{{route('teams.index')}}">Member list</a></li>
 
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Project</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="email-inbox.html">Add Project</a></li>
-            <li><a class="nav-link" href="email-compose.html">Project list</a></li>
+            <li><a class="nav-link"  href="{{route('projects.create')}}">Add Project</a></li>
+            <li><a class="nav-link"  href="{{route('projects.index')}}">Project list</a></li>
              
           </ul>
         </li>
@@ -40,8 +40,8 @@
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="shopping-bag"></i><span>Clients</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="avatar.html">Add new Clients</a></li>
-            <li><a class="nav-link" href="card.html">Clients list</a></li>
+            <li><a class="nav-link"  href="{{route('clients.create')}}">Add new Clients</a></li>
+            <li><a class="nav-link"  href="{{route('clients.index')}}">Clients list</a></li>
              
           </ul>
         </li>
