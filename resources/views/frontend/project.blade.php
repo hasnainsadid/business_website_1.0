@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Team')
+@section('title', 'project')
 
 @section('header')
     @include('frontend.layouts.header.projectheader')

@@ -1,10 +1,11 @@
 @extends('backend.layouts.admin.app')
+@section('title', 'client')
 @section('content')     
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
                 <div class="card text-center"><h2 class="bg-dark text-light" >Clients list</h2>
-                  <div class="card-header"><h4 class="btn btn-info">Create Clients</h4></div>
+                  <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('clients.create')}}">Create Clients</a></h4></div>
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered table-md">

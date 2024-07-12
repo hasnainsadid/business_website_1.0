@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Clients;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -20,15 +21,15 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.client.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
+    {    $client=Client::all();
+        return redirect()->route('clients.index');
     }
 
     /**
