@@ -28,8 +28,8 @@ class ClientController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {    $client=Client::all();
-        return redirect()->route('clients.index');
+    {    
+        
     }
 
     /**
