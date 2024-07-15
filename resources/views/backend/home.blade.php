@@ -1,4 +1,7 @@
 @extends('backend.layouts.admin.app')
+
+@section('title', 'Dashboard')
+
 @section('content')
 <!-- Main Content -->
 <div class="main-content">
