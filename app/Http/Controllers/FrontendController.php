@@ -33,16 +33,21 @@ class FrontendController extends Controller
         return view('frontend.project',compact('project', 'cats'));
     }
 
-    public function Team()
+    public function team()
     {   
         $team = Team::all();
         return view('frontend.team',compact('team'));
     }
 
-    public function Service()
+    public function service()
     {   
         $service = Service::all();
         $clients= Clients::all();
         return view('frontend.service',compact('clients','service'));
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
     }
 }
