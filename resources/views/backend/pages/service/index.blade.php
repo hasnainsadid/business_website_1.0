@@ -1,13 +1,13 @@
 @extends('backend.layouts.admin.app')
 @section('title')
-    service
+    Service
 @show
 @section('content')
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
-                <div class="card text-center"><h2 class="bg-dark text-light" >Service list</h2>
-                  <div class="card-header"><h4 class="btn btn-info">Create Service</h4></div>
+                <div class="card text-center"><h2 class="bg-dark text-light p-2" >Service list</h2>
+                  <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('service.create')}}">Create Service</a></h4></div>
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered table-md">
@@ -27,11 +27,12 @@
                         <tr>
                           <td>{{++$key}}</td>
                           <td>{{$item->title}}</td>
-                          <td>{{$item->description}}</td>
-                          <td><img src="{{asset('')}}assets/img/{{$item->logo}}" width="50px" style="border-radius: 5px"></td>
-                          <td>{{$item->status==1? 'Available' : 'invailable'}}</td>
+                          <td>{{substr($item->description, 0, 50). ' ...'}}</td>
+                          <td><i class="{{$item->logo}} fa-2x"></i></td>
+                          <td>{{$item->status == 1 ? 'Available' : 'invailable'}}</td>
                           <td>
                             <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="#" class="btn btn-primary">show</a>
                             <a href="#" class="btn btn-danger">Delete</a>
                           </td>
                         

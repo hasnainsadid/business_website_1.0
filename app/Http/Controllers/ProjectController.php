@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Category;
 Use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $cats = Category::all();
+        return view('backend.pages.project.create', compact('cats'));
     }
 
     /**
@@ -28,7 +31,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fileName = time(). '.' . $request->img->extension();
+        $input = $request->all();
+        $input['img'] = $fileName;
+
+        if (Project::create($input)) {
+            $request->img->move('assets/img', $fileName);
+            return redirect()->back();
+        }
     }
 
     /**

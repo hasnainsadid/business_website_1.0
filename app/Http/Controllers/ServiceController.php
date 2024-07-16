@@ -20,7 +20,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.service.create');
     }
 
     /**
@@ -28,7 +28,8 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Service::create($request->all());
+        return redirect()->back();
     }
 
     /**
