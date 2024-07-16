@@ -21,7 +21,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('frontend.contact');
     }
 
     /**
@@ -29,7 +29,9 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Contact::create($request->all());
+        // dd($contact);
+        return redirect()->back();
     }
 
     /**

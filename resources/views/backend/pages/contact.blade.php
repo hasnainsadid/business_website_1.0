@@ -1,10 +1,11 @@
 @extends('backend.layouts.admin.app')
+@section('title', 'contact')
 @section('content')     
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
-                <div class="card text-center"><h2 class="bg-dark text-light" >Service list</h2>
-                  <div class="card-header"><h4 class="btn btn-info">Create Service</h4></div>
+                <div class="card text-center"><h2 class="bg-dark text-light" >Contact list</h2>
+                  
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered table-md">
@@ -25,10 +26,9 @@
                         <td>{{$item->name}}</td>
                         <td>{{$item->email}}</td>
                         <td>{{$item->subject}}</td>
-                        <td>{{substr($item->message, 0, 55). '...'}}</td>
+                        <td>{{substr($item->message, 0, 55). ' ...'}}</td>
                         <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="{{route('contact.show', $item->id)}}" class="btn btn-primary">Show</a>
                           </td>
                     <tbody>
                     @endforeach
@@ -41,12 +41,5 @@
           </div>      
     </div>
   </div>
- 
-</body>
-
-
- 
-  
-     
 
 @endsection

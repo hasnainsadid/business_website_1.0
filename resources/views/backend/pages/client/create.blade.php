@@ -4,10 +4,12 @@
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
-                <div class="card text-center"><h2 class="bg-dark text-light" >Add New Clients  </h2>
-                  <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('clients.index')}}">Clients list</a></h4></div>
+                <div class="card text-center"><h2 class="bg-dark text-light p-2" >Add New Clients  </h2>
+                  <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('client.index')}}">Clients list</a></h4></div>
                   <div class="card-body">
-                    <form action="{{route('clients.store')}}" method="post" enctype="multipart/form-data">
+
+
+                    <form action="{{route('client.store')}}" method="post" enctype="multipart/form-data">
                       @csrf 
                       <div class="form-group">
                         <label for="name">Name</label>
@@ -26,7 +28,9 @@
                         <input type="file" class="form-control" id="img" name="img" >
                       </div>
                       <button class="btn btn-success btn-lg" type="submit">Add Client</button>
-                    </form>  
+                    </form>
+
+                    
                   </div>
                 </div>
               </div>

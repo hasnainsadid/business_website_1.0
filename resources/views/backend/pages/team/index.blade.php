@@ -1,4 +1,7 @@
 @extends('backend.layouts.admin.app')
+@section('title')
+    Team
+@show
 @section('content')     
       <div class="main-content"> 
             <div class="row">

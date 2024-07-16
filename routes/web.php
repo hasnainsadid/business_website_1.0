@@ -19,9 +19,9 @@ Route::get('/about', [FrontendController::class, 'about']);
 Route::get('/project', [FrontendController::class, 'project']);
 Route::get('/team',[FrontendController::class, 'team']);
 Route::get('/service',[FrontendController::class, 'service']);
-Route::get('/contact',[FrontendController::class, 'contact']);
+Route::get('/contact',[ContactController::class, 'create']);
 
- 
+
 /* 
 ============================================
                 backend

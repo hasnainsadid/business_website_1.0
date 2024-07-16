@@ -45,9 +45,4 @@ class FrontendController extends Controller
         $clients= Clients::all();
         return view('frontend.service',compact('clients','service'));
     }
-
-    public function contact()
-    {
-        return view('frontend.contact');
-    }
 }
