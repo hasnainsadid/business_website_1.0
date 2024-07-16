@@ -28,21 +28,7 @@ Route::get('/contact',[FrontendController::class, 'contact']);
 ============================================
 */
 
-// Route::get('/dashboard', function () {
-//     return view('backend.home');
-// });
-
-
-// Route::resources([
-//     'dashboard' => AdminController::class,
-//     'team' => TeamController::class,
-//     'service' => ServiceController::class,
-//     'client' => ClientController::class,
-//     'project' => ProjectController::class,
-//     'contact' => ContactController::class,
-// ]);
-
-Route::prefix('admin')->group(function() {
+Route::group(['prefix'=>'admin'], function() {
     $variable = [
         'dashboard' => AdminController::class,
         'team' => TeamController::class,

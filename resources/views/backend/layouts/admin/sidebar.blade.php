@@ -45,41 +45,7 @@
              
           </ul>
         </li>
-        <li><a class="nav-link" href="blank.html"><i data-feather="file"></i><span>Contact</span></a></li>
-        <li class="dropdown">
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="layout"></i><span>Forms</span></a>
-          <ul class="dropdown-menu">
-            <li><a class="nav-link" href="basic-form.html">Basic Form</a></li>
-            <li><a class="nav-link" href="forms-advanced-form.html">Advanced Form</a></li>
-             
-          </ul>
-        </li>
-      
-         
-        <li class="menu-header">Pages</li>
-        <li class="dropdown">
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="user-check"></i><span>Auth</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="auth-login.html">Login</a></li>
-            <li><a href="auth-register.html">Register</a></li>
-            <li><a href="auth-forgot-password.html">Forgot Password</a></li>
-            <li><a href="auth-reset-password.html">Reset Password</a></li>
-            <li><a href="subscribe.html">Subscribe</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="alert-triangle"></i><span>Errors</span></a>
-          <ul class="dropdown-menu">
-            <li><a class="nav-link" href="errors-503.html">503</a></li>
-            <li><a class="nav-link" href="errors-403.html">403</a></li>
-            <li><a class="nav-link" href="errors-404.html">404</a></li>
-            <li><a class="nav-link" href="errors-500.html">500</a></li>
-          </ul>
-        </li>
-         
-         
+        <li><a class="nav-link" href="{{route('contact.index')}}"><i data-feather="file"></i><span>Contact</span></a></li>
       </ul>
     </aside>
   </div>
