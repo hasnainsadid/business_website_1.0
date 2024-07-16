@@ -19,7 +19,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.team.create');
     }
 
     /**
@@ -27,7 +27,14 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fileName = time().'.'. $request->img->extension();
+        $input = $request->all();
+        $input['img'] = $fileName;
+
+        if (Team::create($input)) {
+            $request->img->move('assets/img', $fileName);
+            return redirect()->back();
+        }
     }
 
     /**
