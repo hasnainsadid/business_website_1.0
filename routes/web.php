@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontendController;
@@ -33,6 +34,7 @@ Route::group(['prefix'=>'admin'], function() {
         'dashboard' => AdminController::class,
         'team' => TeamController::class,
         'service' => ServiceController::class,
+        'category' => CategoryController::class,
         'client' => ClientController::class,
         'project' => ProjectController::class,
         'contact' => ContactController::class,

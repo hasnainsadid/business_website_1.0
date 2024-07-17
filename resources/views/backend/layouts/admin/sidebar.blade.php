@@ -9,6 +9,7 @@
         <li class="dropdown {{request()->is('admin/dashboard') ? 'active' :''}}">
           <a href="{{route('dashboard.index')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
+
         <li class="dropdown {{request()->is('admin/service') ? 'active' :''}}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="briefcase"></i><span>Service</span></a>
@@ -17,6 +18,16 @@
             <li><a class="nav-link" href="{{route('service.index')}}">Service list</a></li>
           </ul>
         </li>
+
+        <li class="dropdown {{request()->is('admin/category') ? 'active' :''}}">
+          <a href="#" class="menu-toggle nav-link has-dropdown"><i
+              data-feather="briefcase"></i><span>Category</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{route('category.create')}}">Add New Category</a></li>
+            <li><a class="nav-link" href="{{route('category.index')}}">Category list</a></li>
+          </ul>
+        </li>
+
         <li class="dropdown {{request()->is('admin/team') ? 'active' :''}}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Member</span></a>
           <ul class="dropdown-menu">
