@@ -4,10 +4,9 @@
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
-                <div class="card text-center"><h2 class="bg-dark text-light p-2" >Add New Clients  </h2>
+                <div class="card text-center"><h2 class="bg-dark text-light p-2" >Add New Member  </h2>
                   <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('team.index')}}">Team list</a></h4></div>
                   <div class="card-body">
-
 
                     <form action="{{route('team.store')}}" method="post" enctype="multipart/form-data">
                       @csrf 

@@ -6,7 +6,7 @@
       <div class="main-content"> 
             <div class="row">
               <div class="col-12">
-                <div class="card text-center"><h2 class="bg-dark text-light" >Team list</h2>
+                <div class="card text-center"><h2 class="bg-dark text-light p-2" >Team list</h2>
                   <div class="card-header"><h4 class="btn btn-info"><a class="text-dark" href="{{route('team.create')}}">Create Team Member</a></h4></div>
                   <div class="card-body">
                     <div class="table-responsive">

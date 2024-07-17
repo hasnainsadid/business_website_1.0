@@ -12,10 +12,10 @@
                         <thead>
                         <tr>
                           <th>SN</th>
+                          <th>Image</th>
                           <th>Name</th>
                           <th>Profession</th>
                           <th>Description</th>
-                          <th>Image</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -24,12 +24,13 @@
                       @foreach ($client as $key=>$item)
                         <tr>
                           <td>{{++$key}}</td>
+                          <td><img src="{{asset('')}}assets/img/{{$item->img}}" width="50px" style="border-radius: 5px"></td>                        
                           <td>{{$item->name}}</td>
                           <td>{{$item->profession}}</td>
-                          <td>{{$item->description}}</td>
-                          <td><img src="{{asset('')}}assets/img/{{$item->img}}" width="50px" style="border-radius: 5px"></td>                        
+                          <td>{{substr($item->description, 0, 40). ' ...'}}</td>
                           <td>
                             <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="#" class="btn btn-primary">Show</a>
                             <a href="#" class="btn btn-danger">Delete</a>
                           </td>
                         
