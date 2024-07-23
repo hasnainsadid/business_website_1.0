@@ -26,7 +26,11 @@
                           <td>{{$item->status == 1 ? 'Active' : 'Inactive'}}</td>
                           <td>
                             <a href="{{route('category.edit', $item->id)}}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <form action="{{route('category.destroy', $item->id)}}" method="post" class="d-inline">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-danger" onclick="return(confirm('Are you sure to delete?'))">Delete</button>
+                            </form>
                           </td>
                         
                         </tr>
@@ -38,15 +42,5 @@
                 </div>
               </div>
             </div>
-          </div>      
-    </div>
-  </div>
- 
-</body>
-
-
- 
-  
-     
-
+          </div>
 @endsection

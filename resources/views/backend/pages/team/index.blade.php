@@ -31,8 +31,12 @@
                           <td>{{$item->designation}}</td>
                           <td>{{$item->email}}</td>
                           <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="{{route('team.edit', $item->id)}}" class="btn btn-primary">Edit</a>
+                            <form action="{{route('team.destroy', $item->id)}}" method="post" class="d-inline">
+                              @csrf
+                              @method('DELETE')
+                              <button class="btn btn-danger" onclick="return(confirm('Are you sure to Delete?'))" type="submit">Delete</button>
+                            </form>
                           </td>
                         
                         </tr>
@@ -44,15 +48,5 @@
                 </div>
               </div>
             </div>
-          </div>      
-    </div>
-  </div>
- 
-</body>
-
-
- 
-  
-     
-
+          </div>
 @endsection

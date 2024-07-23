@@ -44,7 +44,8 @@ class ClientController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $client = Clients::findorfail($id);
+        return view('backend.pages.client.show', compact('client'));
     }
 
     /**
@@ -52,7 +53,8 @@ class ClientController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $client = Clients::findorfail($id);
+        return view('backend.pages.client.edit', compact('client'));
     }
 
     /**
@@ -60,7 +62,9 @@ class ClientController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $client = Clients::findorfail($id);
+        $client->update($request->all());
+        return redirect()->route('client.index');
     }
 
     /**
@@ -68,6 +72,8 @@ class ClientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $client = Clients::findorfail($id);
+        $client->delete();
+        return back();
     }
 }

@@ -21,7 +21,7 @@
 
         <li class="dropdown {{request()->is('admin/category') ? 'active' :''}}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="briefcase"></i><span>Category</span></a>
+              data-feather="shopping-bag"></i><span>Category</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="{{route('category.create')}}">Add New Category</a></li>
             <li><a class="nav-link" href="{{route('category.index')}}">Category list</a></li>
@@ -29,7 +29,7 @@
         </li>
 
         <li class="dropdown {{request()->is('admin/team') ? 'active' :''}}">
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Member</span></a>
+          <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="user"></i><span>Member</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="{{route('team.create')}}">Add New Member</a></li>
             <li><a class="nav-link" href="{{route('team.index')}}">Member list</a></li>
@@ -37,7 +37,7 @@
           </ul>
         </li>
         <li class="dropdown {{request()->is('admin/project') ? 'active' :''}}">
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="file"></i><span>Project</span></a>
+          <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Project</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link"  href="{{route('project.create')}}">Add Project</a></li>
             <li><a class="nav-link"  href="{{route('project.index')}}">Project list</a></li>
@@ -48,7 +48,7 @@
         
         <li class="dropdown {{request()->is('admin/client') ? 'active' :''}}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="shopping-bag"></i><span>Clients</span></a>
+              data-feather="users"></i><span>Clients</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link"  href="{{route('client.create')}}">Add new Clients</a></li>
             <li><a class="nav-link"  href="{{route('client.index')}}">Clients list</a></li>

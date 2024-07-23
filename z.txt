@@ -1,4 +1,13 @@
-category add delete korar jonno admin panel e section thakte hobe.... 
+
 service er logor jonno dropdown kore dite hobe.... dropdown theke amra logo select kore dite pari.... 
 
 
+
+Auth korte hobe.... 
+return er sathe kivabe view & response eksathe use kora jay? 
+
+
+
+
+
+vs code er prettier and formater notun kore sajate hobe.... settings ta new kore sajaiya nite hobe.... ager moto output dicche na.... return view er jonno ekta snippet banaiya nite hobe... 

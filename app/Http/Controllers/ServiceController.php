@@ -37,7 +37,8 @@ class ServiceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $service = Service::findorfail($id);
+        return view('backend.pages.service.show', compact('service'));
     }
 
     /**
@@ -45,7 +46,8 @@ class ServiceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $service = Service::findorfail($id);
+        return view('backend.pages.service.edit', compact('service'));
     }
 
     /**
@@ -53,7 +55,9 @@ class ServiceController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $service = Service::findorfail($id);
+        $service->update($request->all());
+        return redirect()->route('service.index');
     }
 
     /**
@@ -61,6 +65,8 @@ class ServiceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $service = Service::findorfail($id);
+        $service->delete();
+        return back();
     }
 }

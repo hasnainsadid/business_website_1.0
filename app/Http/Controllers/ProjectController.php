@@ -54,22 +54,29 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $project = Project::find($id);
+        $cats = Category::all();
+        return view('backend.pages.project.edit', compact('project', 'cats'));
     }
-
+    
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
         //
+        $project = Project::find($id);
+        $project->update($request->all());
+        return redirect()->route('project.index');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $project = Project::find($id);
+        $project->delete();
+        return back();
     }
 }

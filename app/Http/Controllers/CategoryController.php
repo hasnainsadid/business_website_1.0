@@ -14,6 +14,7 @@ class CategoryController extends Controller
     {
         $cats = Category::all();
         return view('backend.pages.category.index', compact('cats'));
+        // return response()->json($cats);
     }
 
     /**
@@ -55,7 +56,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // 
+        $category = Category::findorfail($id);
+        $category->update($request->all());
+        return redirect()->route('category.index');
     }
 
     /**
@@ -63,6 +66,8 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cats = Category::findorfail($id);
+        $cats->delete();
+        return back();
     }
 }

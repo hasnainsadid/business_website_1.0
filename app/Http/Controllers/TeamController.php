@@ -50,7 +50,8 @@ class TeamController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $team = Team::findorfail($id);
+        return view('backend.pages.team.edit', compact('team'));
     }
 
     /**
@@ -58,7 +59,9 @@ class TeamController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $team = Team::findorfail($id);
+        $team->update($request->all());
+        return redirect()->route('team.index');
     }
 
     /**
@@ -66,6 +69,8 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $team = Team::findorfail($id);
+        $team->delete();
+        return back();
     }
 }

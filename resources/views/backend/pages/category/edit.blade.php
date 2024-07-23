@@ -10,6 +10,7 @@
 
                     <form action="{{route('category.update', $cats->id)}}" method="post">
                       @csrf 
+                      @method('PUT')
                       <div class="form-group">
                         <label for="category">Category Name</label>
                         <input type="text" class="form-control" id="category" name="category" placeholder="Client's Name" value="{{old('category', $cats->category)}}">
@@ -18,8 +19,8 @@
                         <label for="status">Status</label>
                         <select name="status" id="status" class="form-control">
                             <option selected>{{old('status',$cats->status) == 1 ? 'Active' : 'Inactive'}}</option>
-                            <option value="1" @selected($cats->id == 1)>{{old('status',$cats->status) == 1 ? 'Active' : 'Inactive'}}</option>
-                            <option value="0" @selected($cats->id == 0)>{{old('status',$cats->status) == 0 ? 'Active' : 'Inactive'}}</option>
+                            <option value="1">Active</option>
+                            <option value="0">Inactive</option>
                         </select>
                       </div>
                       
@@ -30,7 +31,5 @@
                 </div>
               </div>
             </div>
-          </div>      
-    </div>
-  </div>
+          </div>
 @endsection
