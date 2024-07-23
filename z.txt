@@ -4,7 +4,8 @@ service er logor jonno dropdown kore dite hobe.... dropdown theke amra logo sele
 
 
 Auth korte hobe.... 
-return er sathe kivabe view & response eksathe use kora jay? 
+team seed er link gula thik kore dite hobe.... (must)...
+return er sathe kivabe view & response eksathe use kora jay? (controller e)... 
 
 
 

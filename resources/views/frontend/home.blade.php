@@ -240,15 +240,15 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="{{asset('')}}assets/img/{{$item->img}}" alt="">
+                                <img class="mb-4" src="{{asset('')}}assets/img/{{$item->img}}" alt="team_img" height="300px" width="300px" style="border-radius: 50%">
                                 <h5>{{$item->name}}</h5>
                                 <span>{{$item->designation}}</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="{{$item->facebook}}"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="{{$item->twitter}}"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="{{$item->insta}}"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="{{$item->linkedin}}"></i></a>
+                                <a class="btn btn-square mx-1" href="{{$item->facebook}}"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href="{{$item->twitter}}"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href="{{$item->insta}}"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href="{{$item->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>  
