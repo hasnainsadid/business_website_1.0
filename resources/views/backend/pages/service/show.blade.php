@@ -1,5 +1,5 @@
 @extends('backend.layouts.admin.app')
-@section('title', 'contact')
+@section('title', 'Service')
 @section('content')     
   <div class="main-content"> 
     <div class="row">
