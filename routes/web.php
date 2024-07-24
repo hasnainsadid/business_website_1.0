@@ -29,7 +29,8 @@ Route::get('/contact',[ContactController::class, 'create']);
 ============================================
 */
 
-Route::group(['prefix'=>'admin'], function() {
+Route::redirect('./admin', './admin/dashboard');
+Route::group(['prefix'=>'admin', 'middleware'=>'auth', ], function() {
     $variable = [
         'dashboard' => AdminController::class,
         'team' => TeamController::class,
@@ -44,3 +45,5 @@ Route::group(['prefix'=>'admin'], function() {
         Route::resource($key, $value);
     }
 });
+
+require __DIR__.'/auth.php';

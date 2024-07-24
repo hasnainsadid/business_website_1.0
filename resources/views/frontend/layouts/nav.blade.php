@@ -15,6 +15,6 @@
             <a href="{{url('/team')}}" class="nav-item nav-link {{request()->is('team') ? 'active' : ''}}">Team</a>
             <a href="{{url('/contact')}}" class="nav-item nav-link {{request()->is('contact') ? 'active' : ''}}">Contact</a>
         </div>
-        <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+        <a href="{{route('login')}}" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
     </div>
 </nav>
