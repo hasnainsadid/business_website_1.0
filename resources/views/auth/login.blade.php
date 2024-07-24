@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="loader"></div>
   <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -78,13 +79,13 @@
     </section>
   </div>
   <!-- General JS Scripts -->
-  <script src="assets/js/app.min.js"></script>
+  <script src="{{asset('')}}backend/assets/js/app.min.js"></script>
   <!-- JS Libraies -->
   <!-- Page Specific JS File -->
   <!-- Template JS File -->
-  <script src="assets/js/scripts.js"></script>
+  <script src="{{asset('')}}backend/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
-  <script src="assets/js/custom.js"></script>
+  <script src="{{asset('')}}backend/assets/js/custom.js"></script>
 </body>
 
 
