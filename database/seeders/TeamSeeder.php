@@ -18,43 +18,43 @@ class TeamSeeder extends Seeder
             'designation' => 'CEO & Founder',
             'email' => 'mehedi@gmail.com', 
             'img' => 'team-1.jpg',
-            'facebook' => 'fab fa-facebook-f',
-            'twitter' => 'fab fa-twitter',
-            'insta' => 'fab fa-instagram',
-            'linkedin' => 'fab fa-linkedin-in',
+            'facebook' => 'https://www.facebook.com/hasnain.sadid',
+            'twitter' => 'https://www.twitter.com/',
+            'insta' => 'https://www.instagram.com/_sadid_rafi',
+            'linkedin' => 'https://www.linkedin.com/',
         ]);
         
         DB::table('team')->insert([
             'name' => 'jecika joi',
-            'designation' => 'CEO & Founder',
+            'designation' => 'Graphics Designer',
             'email' => 'joi@gmail.com', 
             'img' => 'team-2.jpg',
-            'facebook' => 'fab fa-facebook-f',
-            'twitter' => 'fab fa-twitter',
-            'insta' => 'fab fa-instagram',
-            'linkedin' => 'fab fa-linkedin-in',
+            'facebook' => 'https://www.facebook.com/hasnain.sadid',
+            'twitter' => 'https://www.twitter.com/',
+            'insta' => 'https://www.instagram.com/_sadid_rafi',
+            'linkedin' => 'https://www.linkedin.com/',
         ]);
 
         DB::table('team')->insert([
             'name' => 'John Doe',
-            'designation' => 'CEO & Founder',
+            'designation' => 'Web Developer',
             'email' => 'john@gmail.com', 
             'img' => 'team-3.jpg',
-            'facebook' => 'fab fa-facebook-f',
-            'twitter' => 'fab fa-twitter',
-            'insta' => 'fab fa-instagram',
-            'linkedin' => 'fab fa-linkedin-in',
+            'facebook' => 'https://www.facebook.com/hasnain.sadid',
+            'twitter' => 'https://www.twitter.com/',
+            'insta' => 'https://www.instagram.com/_sadid_rafi',
+            'linkedin' => 'https://www.linkedin.com/',
         ]);
 
         DB::table('team')->insert([
             'name' => 'Tony Johnson',
             'designation' => 'SEO Expert',
             'email' => 'tony@gmail.com', 
-            'img' => 'team-1.jpg',
-            'facebook' => 'fab fa-facebook-f',
-            'twitter' => 'fab fa-twitter',
-            'insta' => 'fab fa-instagram',
-            'linkedin' => 'fab fa-linkedin-in',
+            'img' => 'team-4.jpg',
+            'facebook' => 'https://www.facebook.com/hasnain.sadid',
+            'twitter' => 'https://www.twitter.com/',
+            'insta' => 'https://www.instagram.com/_sadid_rafi',
+            'linkedin' => 'https://www.linkedin.com/',
         ]);
     }
 }
