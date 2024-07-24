@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>BusinessWeb | Login</title>
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{asset('')}}backend/assets/css/app.min.css">
-    <link rel="stylesheet" href="{{asset('')}}backend/assets/bundles/bootstrap-social/bootstrap-social.css">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{asset('')}}backend/assets/css/style.css">
-    <link rel="stylesheet" href="{{asset('')}}backend/assets/css/components.css">
-    <!-- Custom style CSS -->
-    <link rel="stylesheet" href="{{asset('')}}backend/assets/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href="{{asset('')}}backend/assets/img/favicon.ico" />
-  </head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>BusinessWeb | Login</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{{asset('')}}backend/assets/css/app.min.css">
+  <link rel="stylesheet" href="{{asset('')}}backend/assets/bundles/bootstrap-social/bootstrap-social.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{asset('')}}backend/assets/css/style.css">
+  <link rel="stylesheet" href="{{asset('')}}backend/assets/css/components.css">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="{{asset('')}}backend/assets/css/custom.css">
+  <link rel='shortcut icon' type='image/x-icon' href="{{asset('')}}backend/assets/img/favicon.ico" />
+</head>
 
 <body>
   <div id="app">
@@ -71,9 +71,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="auth-register.html">Create One</a>
             </div>
           </div>
         </div>
