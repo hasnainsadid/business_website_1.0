@@ -29,8 +29,9 @@ Route::get('/contact',[ContactController::class, 'create']);
 ============================================
 */
 
-Route::redirect('./admin', './admin/dashboard');
-Route::group(['prefix'=>'admin', 'middleware'=>'auth', ], function() {
+Route::redirect('admin', './admin/dashboard');
+
+Route::group([ 'prefix'=>'admin', 'middleware'=>['auth', 'verified'] ], function() {
     $variable = [
         'dashboard' => AdminController::class,
         'team' => TeamController::class,
