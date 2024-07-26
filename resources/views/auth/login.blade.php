@@ -45,7 +45,7 @@
                         </a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required value="password">
                     <div class="invalid-feedback">
                       please fill in your password
                     </div>
