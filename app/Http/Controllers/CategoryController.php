@@ -10,11 +10,11 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $cats = Category::all();
+
         return view('backend.pages.category.index', compact('cats'));
-        // return response()->json($cats);
     }
 
     /**

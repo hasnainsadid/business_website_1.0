@@ -19,7 +19,12 @@ class FrontendController extends Controller
         $cats = Category::all();
         $project = Project::all();
         $team = Team::all();
-        return view('frontend.home', compact('service', 'clients', 'cats', 'project', 'team' ));
+
+        $service_c = Service::count();
+        $clints_c = Clients::count();
+        $project_c = Project::count();
+        $team_c = Team::count();
+        return view('frontend.home', compact('service', 'clients', 'cats', 'project', 'team', 'service_c', 'clints_c', 'project_c', 'team_c'));
     }
     public function about()
     {
