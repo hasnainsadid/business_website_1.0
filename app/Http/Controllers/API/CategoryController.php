@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cats = Category::all();
-        return view('backend.pages.category.index', compact('cats'));
-        // return response()->json($cats);
+        $category = Category::all();
+        return response()->json($category);
     }
 
     /**
@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.category.create');
+        //
     }
 
     /**
@@ -30,8 +30,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        Category::create($request->all());
-        return redirect()->back();
+        //
     }
 
     /**
@@ -47,8 +46,7 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        $cats = Category::find($id);
-        return view('backend.pages.category.edit', compact('cats'));
+        //
     }
 
     /**
@@ -56,9 +54,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $category = Category::findorfail($id);
-        $category->update($request->all());
-        return redirect()->route('category.index');
+        //
     }
 
     /**
@@ -66,8 +62,6 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        $cats = Category::findorfail($id);
-        $cats->delete();
-        return back();
+        //
     }
 }
