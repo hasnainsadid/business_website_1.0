@@ -19,20 +19,20 @@ class ContactController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        return view('frontend.contact');
-    }
+    // public function create()
+    // {
+    //     return view('frontend.contact');
+    // }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        Contact::create($request->all());
-        // dd($contact);
-        return redirect()->back();
-    }
+    // public function store(Request $request)
+    // {
+    //     Contact::create($request->all());
+    //     dd($contact);
+    //     return redirect()->back();
+    // }
 
     /**
      * Display the specified resource.

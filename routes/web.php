@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FrontContactController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
@@ -20,8 +21,8 @@ Route::get('/about', [FrontendController::class, 'about']);
 Route::get('/project', [FrontendController::class, 'project']);
 Route::get('/team',[FrontendController::class, 'team']);
 Route::get('/service',[FrontendController::class, 'service']);
-Route::get('/contact',[ContactController::class, 'create']);
-
+Route::get('/contact',[FrontendController::class, 'contact']);
+Route::post('/contact',[FrontendController::class, 'store_contact'])->name('store_contact');
 
 /* 
 ============================================

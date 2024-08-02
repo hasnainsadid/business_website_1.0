@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Service;
 use App\Models\Clients;
+use App\Models\Contact;
 use App\Models\Project;
 use App\Models\Team;
  
@@ -54,5 +55,22 @@ class FrontendController extends Controller
         $service = Service::all();
         $clients= Clients::all();
         return view('frontend.service',compact('clients','service'));
+    }
+
+        /**
+     * Show the form for creating a new resource.
+     */
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store_contact(Request $request)
+    {
+        Contact::create($request->all());
+        return redirect()->back();
     }
 }

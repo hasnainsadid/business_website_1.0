@@ -18,7 +18,7 @@
                 <div class="col-lg-7">
                     <div class="wow fadeInUp" data-wow-delay="0.3s">
                         <p class="text-center mb-4">Feel Free to Contact With Us</a>.</p>
-                        <form action="{{route('contact.store')}}" method="POST">
+                        <form action="{{route('store_contact')}}" method="POST">
                             @csrf
                             <div class="row g-3">
                                 <div class="col-md-6">
