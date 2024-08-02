@@ -28,7 +28,12 @@ class FrontendController extends Controller
     }
     public function about()
     {
-        return view('frontend.about');
+        $service_c = Service::count(); 
+        $clints_c = Clients::count();
+        $project_c = Project::count();
+        $team_c = Team::count();
+
+        return view('frontend.about', compact('service_c', 'clints_c', 'project_c', 'team_c'));
     }
     
     public function project()
