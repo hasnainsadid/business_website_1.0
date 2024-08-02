@@ -13,7 +13,7 @@
                       @csrf 
                       <div class="form-group">
                         <label for="category">Category Name</label>
-                        <input type="text" class="form-control" id="category" name="category" placeholder="Client's Name">
+                        <input type="text" class="form-control" id="category" name="category" placeholder="Category Name">
                       </div>
                       <div class="form-group">
                         <label for="status">Status</label>
