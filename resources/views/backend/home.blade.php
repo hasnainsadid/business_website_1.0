@@ -5,7 +5,7 @@
 @section('content')
 <!-- Main Content -->
   <div class="main-content">
-    <section class="section">
+    <section class="section"> <h2 class="mb-3"> Welcome Dashboard {{Auth::user()->name}}</h2>
       <div class="row ">
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="card">
