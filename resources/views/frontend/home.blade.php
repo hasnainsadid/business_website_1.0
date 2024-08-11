@@ -234,26 +234,29 @@
                 <h1 class="text-center mb-5">Our Team Members</h1>
             </div>
             <div class="row g-4">
-                 
-                <div class="row g-4">
-                    @foreach ($team as $item )
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="mb-4" src="{{asset('')}}assets/img/{{$item->img}}" alt="team_img" height="300px" width="300px" style="border-radius: 50%">
-                                <h5>{{$item->name}}</h5>
-                                <span>{{$item->designation}}</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href="{{$item->facebook}}"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href="{{$item->twitter}}"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href="{{$item->insta}}"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href="{{$item->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                @foreach ($team as $item )
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="mb-4" src="{{asset('')}}assets/img/{{$item->img}}" alt="team_img" height="300px" width="300px" style="border-radius: 50%">
+                            <h5>{{$item->name}}</h5>
+                            <span>{{$item->designation}}</span>
                         </div>
-                    </div>  
-                    @endforeach
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href="{{$item->facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="{{$item->twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="{{$item->insta}}"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square mx-1" href="{{$item->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>  
+                @endforeach
             </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-primary" href="{{url('team')}}">All Member</a>
+            </div>
+
         </div>
     </div>
     <!-- Team End -->

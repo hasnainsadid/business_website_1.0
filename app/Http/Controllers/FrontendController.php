@@ -19,7 +19,7 @@ class FrontendController extends Controller
         $clients= Clients::all();
         $cats = Category::all();
         $project = Project::all();
-        $team = Team::all();
+        $team = Team::take(3)->get();
 
         $service_c = Service::count();
         $clints_c = Clients::count();
@@ -39,7 +39,7 @@ class FrontendController extends Controller
     
     public function project()
     {   
-        $project = Project::all();
+        $project = Project::orderby('id','desc')->get();
         $cats = Category::all();
         return view('frontend.project',compact('project', 'cats'));
     }
@@ -52,7 +52,7 @@ class FrontendController extends Controller
 
     public function service()
     {   
-        $service = Service::all();
+        $service = Service::orderby('id', 'desc')->paginate(3);
         $clients= Clients::all();
         return view('frontend.service',compact('clients','service'));
     }

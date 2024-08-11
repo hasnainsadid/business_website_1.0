@@ -27,6 +27,9 @@
                 </div>
                 @endforeach
         </div>
+        <div class="pt-5">
+            {{$service->links('pagination::bootstrap-5')}}
+        </div>
     </div>
     <!-- Service End -->
 
